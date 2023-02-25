@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+
+  storage:
+    build: .
+    container_name: storage
+    env_file:
+      - .env
+    image: app
+    ports:
+      - "8001:8001"
+
+  memcached:
+    image: memcached
+    container_name: memcached
+    ports:
+      - "11211:11211"

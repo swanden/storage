@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package storage.api;
+
+option go_package = "storage/api";
+
+import "google/protobuf/empty.proto";
+
+service Storage {
+  rpc Set(SetRequest) returns (google.protobuf.Empty);
+  rpc Get(GetRequest) returns (GetResponse);
+  rpc Delete(DeleteRequest) returns (google.protobuf.Empty);
+}
+
+message SetRequest {
+  string key = 1;
+  string value = 2;
+  int64 ttl = 3; // seconds
+}
+
+message GetRequest {
+  string key = 1;
+}
+
+message GetResponse {
+  string value = 1;
+}
+
+message DeleteRequest {
+  string key = 1;
+}
