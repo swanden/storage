@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	host         = "localhost"
+	host         = "memcached"
 	port         = 11211
 	maxIdleConns = 10
 	maxOpenConns = 10
