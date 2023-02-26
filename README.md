@@ -20,6 +20,11 @@ Run
 make up
 ~~~
 
+Stop
+~~~
+make down
+~~~
+
 Integration tests
 ~~~
 make integration-tests
@@ -28,9 +33,4 @@ make integration-tests
 Unit tests
 ~~~
 make unit-tests
-~~~
-
-Stop
-~~~
-make down
 ~~~
