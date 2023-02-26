@@ -2,11 +2,11 @@ version: '3.8'
 services:
 
   storage:
+    image: app
     build: .
     container_name: storage
     env_file:
       - .env
-    image: app
     ports:
       - "8001:8001"
 

@@ -7,11 +7,15 @@ up:
 down:
 	docker-compose down
 
-integration-tests:
-	docker-compose run --rm storage go run ./test/integration
+integration-tests: up integration-tests-run down
 
-unit-tests:
-	docker-compose run --rm storage go test -v -count=1 ./...
+unit-tests: up unit-tests-run down
+
+integration-tests-run:
+	docker-compose exec storage go run ./test/integration
+
+unit-tests-run:
+	docker-compose exec storage go test -v -count=1 ./...
 
 build-proto:
 	protoc \
