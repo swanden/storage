@@ -15,22 +15,22 @@
 Usage
 ================
 
-Run
+Run application
 ~~~
 make up
 ~~~
 
-Stop
+Stop application
 ~~~
 make down
 ~~~
 
-Integration tests
+Run integration tests
 ~~~
 make integration-tests
 ~~~
 
-Unit tests
+Run unit tests
 ~~~
 make unit-tests
 ~~~
